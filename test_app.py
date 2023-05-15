@@ -47,6 +47,7 @@ class TestWebApp(unittest.TestCase):
         }, follow_redirects = True)
         assert response.status_code == 200
         # should redirect to the login page
+        
         assert response.request.path == '/login'
 
         # verify that user can now login
